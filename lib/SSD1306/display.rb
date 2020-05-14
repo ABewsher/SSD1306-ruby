@@ -145,7 +145,7 @@ module SSD1306
     end
 
     def image(image)
-      image.image_type = BilevelType
+      image.image_type = Magick::BilevelType
       pix = image.export_pixels(0, 0, @width, @height, 'I')
       index = 0
       for page in 0...@pages
